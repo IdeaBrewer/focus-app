@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary Colors -->
+    <color name="focus_primary">#E60012</color>
+    <color name="focus_primary_container">#FFE8E8</color>
+    <color name="focus_on_primary">#FFFFFF</color>
+    <color name="focus_on_primary_container">#410001</color>
+    
+    <!-- Secondary Colors -->
+    <color name="focus_secondary">#77574A</color>
+    <color name="focus_secondary_container">#FFDDD1</color>
+    <color name="focus_on_secondary">#FFFFFF</color>
+    <color name="focus_on_secondary_container">#2C160C</color>
+    
+    <!-- Tertiary Colors -->
+    <color name="focus_tertiary">#665E32</color>
+    <color name="focus_tertiary_container">#EFE2AC</color>
+    <color name="focus_on_tertiary">#FFFFFF</color>
+    <color name="focus_on_tertiary_container">#201C00</color>
+    
+    <!-- Error Colors -->
+    <color name="focus_error">#BA1A1A</color>
+    <color name="focus_error_container">#FFDAD6</color>
+    <color name="focus_on_error">#FFFFFF</color>
+    <color name="focus_on_error_container">#410002</color>
+    
+    <!-- Background Colors -->
+    <color name="focus_background">#FFFBFF</color>
+    <color name="focus_on_background">#1F1B16</color>
+    <color name="focus_surface">#FFFBFF</color>
+    <color name="focus_on_surface">#1F1B16</color>
+    
+    <!-- Surface Variant Colors -->
+    <color name="focus_surface_variant">#F5DED5</color>
+    <color name="focus_on_surface_variant">#53443C</color>
+    
+    <!-- Outline Colors -->
+    <color name="focus_outline">#85736B</color>
+    <color name="focus_outline_variant">#D7C2B8</color>
+    
+    <!-- Inverse Colors -->
+    <color name="focus_inverse_surface">#34302A</color>
+    <color name="focus_inverse_on_surface">#FBEEE7</color>
+    <color name="focus_inverse_primary">#FFB4AB</color>
+    
+    <!-- Scrim Colors -->
+    <color name="focus_scrim">#000000</color>
+    
+    <!-- Platform Colors -->
+    <color name="platform_xiaohongshu">#FF2442</color>
+    <color name="platform_douyin">#000000</color>
+    <color name="platform_bilibili">#FB7299</color>
+    
+    <!-- Usage Colors -->
+    <color name="usage_low">#4CAF50</color>
+    <color name="usage_medium">#FF9800</color>
+    <color name="usage_high">#F44336</color>
+    
+    <!-- Status Colors -->
+    <color name="status_success">#4CAF50</color>
+    <color name="status_warning">#FF9800</color>
+    <color name="status_error">#F44336</color>
+    <color name="status_info">#2196F3</color>
+    
+    <!-- Divider Colors -->
+    <color name="divider">#E0E0E0</color>
+    <color name="divider_dark">#BDBDBD</color>
+    
+    <!-- Shadow Colors -->
+    <color name="shadow_start">#1A000000</color>
+    <color name="shadow_end">#00000000</color>
+    
+    <!-- Ripple Colors -->
+    <color name="ripple_light">#1A000000</color>
+    <color name="ripple_dark">#1AFFFFFF</color>
+    
+    <!-- Card Colors -->
+    <color name="card_background">#FFFFFF</color>
+    <color name="card_background_dark">#121212</color>
+    <color name="card_stroke">#E0E0E0</color>
+    <color name="card_stroke_dark">#333333</color>
+    
+    <!-- Button Colors -->
+    <color name="button_primary">#E60012</color>
+    <color name="button_secondary">#77574A</color>
+    <color name="button_outline">#85736B</color>
+    
+    <!-- Text Colors -->
+    <color name="text_primary">#1F1B16</color>
+    <color name="text_secondary">#53443C</color>
+    <color name="text_tertiary">#85736B</color>
+    <color name="text_disabled">#BDBDBD</color>
+    <color name="text_on_primary">#FFFFFF</color>
+    <color name="text_on_secondary">#FFFFFF</color>
+    
+    <!-- Icon Colors -->
+    <color name="icon_primary">#1F1B16</color>
+    <color name="icon_secondary">#53443C</color>
+    <color name="icon_tertiary">#85736B</color>
+    <color name="icon_disabled">#BDBDBD</color>
+    
+    <!-- Background Variants -->
+    <color name="background_primary">#FFFBFF</color>
+    <color name="background_secondary">#F5F5F5</color>
+    <color name="background_tertiary">#EEEEEE</color>
+    <color name="background_disabled">#F5F5F5</color>
+    
+    <!-- Surface Variants -->
+    <color name="surface_primary">#FFFBFF</color>
+    <color name="surface_secondary">#F5F5F5</color>
+    <color name="surface_tertiary">#EEEEEE</color>
+    <color name="surface_disabled">#F5F5F5</color>
+    
+    <!-- Border Colors -->
+    <color name="border_primary">#E0E0E0</color>
+    <color name="border_secondary">#BDBDBD</color>
+    <color name="border_tertiary">#9E9E9E</color>
+    <color name="border_disabled">#E0E0E0</color>
+    
+    <!-- Elevation Colors -->
+    <color name="elevation_level1">#0F000000</color>
+    <color name="elevation_level2">#1A000000</color>
+    <color name="elevation_level3">#26000000</color>
+    <color name="elevation_level4">#33000000</color>
+    <color name="elevation_level5">#40000000</color>
+    
+</resources>

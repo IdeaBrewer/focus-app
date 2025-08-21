@@ -1,0 +1,122 @@
+<resources>
+    <!-- App Name -->
+    <string name="app_name">Focus</string>
+    
+    <!-- Main Screen -->
+    <string name="main_title">Focus</string>
+    <string name="main_subtitle">专注搜索，高效管理</string>
+    <string name="search_hint">搜索关键词...</string>
+    <string name="search_button">搜索</string>
+    <string name="today_usage">今日使用时长</string>
+    <string name="settings">设置</string>
+    <string name="about">关于</string>
+    
+    <!-- Platform Selection -->
+    <string name="platform_xiaohongshu">小红书</string>
+    <string name="platform_douyin">抖音</string>
+    <string name="platform_bilibili">B站</string>
+    
+    <!-- Search Screen -->
+    <string name="search_title">搜索</string>
+    <string name="search_input_hint">请输入搜索关键词</string>
+    <string name="select_platform">选择搜索平台</string>
+    <string name="start_search">开始搜索</string>
+    
+    <!-- Settings Screen -->
+    <string name="settings_title">设置</string>
+    <string name="reminder_settings">提醒设置</string>
+    <string name="usage_reminder">使用时长提醒</string>
+    <string name="reminder_15min">15分钟</string>
+    <string name="reminder_30min">30分钟</string>
+    <string name="reminder_60min">60分钟</string>
+    <string name="reminder_methods">提醒方式</string>
+    <string name="popup_reminder">弹窗提醒</string>
+    <string name="vibration_reminder">震动提醒</string>
+    <string name="sound_reminder">声音提醒</string>
+    
+    <!-- Permission Management -->
+    <string name="permission_management">权限管理</string>
+    <string name="accessibility_service">无障碍服务</string>
+    <string name="usage_stats_permission">使用情况访问</string>
+    <string name="permission_granted">已授权</string>
+    <string name="permission_not_granted">未授权</string>
+    <string name="reauthorize">重新授权</string>
+    <string name="permission_guide">权限说明</string>
+    
+    <!-- About -->
+    <string name="about_title">关于</string>
+    <string name="version">版本</string>
+    <string name="developer">开发者</string>
+    <string name="developer_name">Focus Team</string>
+    
+    <!-- Reminder Overlay -->
+    <string name="usage_reminder_title">使用提醒</string>
+    <string name="usage_reminder_message">您已使用%s %d分钟，注意合理使用时间</string>
+    <string name="today_total_usage">今日总时长: %s</string>
+    <string name="continue_use">继续使用</string>
+    <string name="stop_use">停止使用</string>
+    <string name="dismiss_today">今日不再提醒</string>
+    <string name="close">关闭</string>
+    
+    <!-- Permission Guide -->
+    <string name="permission_guide_title">权限说明</string>
+    <string name="permission_guide_description">需要以下权限才能正常使用Focus:</string>
+    <string name="accessibility_permission_desc">用于检测APP使用状态，记录使用时长</string>
+    <string name="usage_stats_permission_desc">用于获取精确的APP使用时长数据</string>
+    <string name="overlay_permission_desc">用于显示悬浮窗提醒</string>
+    <string name="privacy_commitment">我们承诺:</string>
+    <string name="privacy_point1">仅用于功能实现，不会收集您的隐私数据</string>
+    <string name="privacy_point2">所有数据本地存储，不会上传到云端</string>
+    <string name="privacy_point3">可以随时在设置中关闭权限</string>
+    <string name="authorize_now">立即授权</string>
+    <string name="authorize_later">稍后设置</string>
+    
+    <!-- Accessibility Service -->
+    <string name="accessibility_service_label">Focus 使用监控服务</string>
+    <string name="accessibility_service_description">Focus使用此服务来监控应用使用情况，帮助您管理使用时间</string>
+    
+    <!-- Error Messages -->
+    <string name="error_network">网络连接错误</string>
+    <string name="error_permission_denied">权限被拒绝</string>
+    <string name="error_app_not_found">未找到目标应用</string>
+    <string name="error_search_failed">搜索失败</string>
+    <string name="error_unknown">未知错误</string>
+    
+    <!-- Success Messages -->
+    <string name="success_search">搜索成功</string>
+    <string name="success_settings_saved">设置已保存</string>
+    <string name="success_permission_granted">权限已授权</string>
+    
+    <!-- Time Format -->
+    <string name="time_minute">%d分钟</string>
+    <string name="time_hour">%d小时</string>
+    <string name="time_format">%02d:%02d:%02d</string>
+    
+    <!-- Usage Stats -->
+    <string name="usage_today">今日</string>
+    <string name="usage_week">本周</string>
+    <string name="usage_month">本月</string>
+    <string name="usage_total">总计</string>
+    
+    <!-- Actions -->
+    <string name="action_back">返回</string>
+    <string name="action_save">保存</string>
+    <string name="action_cancel">取消</string>
+    <string name="action_confirm">确认</string>
+    <string name="action_retry">重试</string>
+    <string name="action_refresh">刷新</string>
+    
+    <!-- Notifications -->
+    <string name="notification_channel_name">Focus提醒</string>
+    <string name="notification_channel_description">使用时间提醒通知</string>
+    <string name="notification_title">Focus正在运行</string>
+    <string name="notification_text">正在监控您的使用时间</string>
+    
+    <!-- Content Descriptions -->
+    <string name="content_description_search_icon">搜索图标</string>
+    <string name="content_description_settings_icon">设置图标</string>
+    <string name="content_description_platform_icon">平台图标</string>
+    <string name="content_description_usage_chart">使用时长图表</string>
+    <string name="content_description_reminder_icon">提醒图标</string>
+    
+</resources>
