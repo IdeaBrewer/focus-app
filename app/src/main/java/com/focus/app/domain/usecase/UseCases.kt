@@ -74,6 +74,30 @@ class UpdateReminderIntervalUseCase(
     }
 }
 
+class UpdateReminderMethodsUseCase(
+    private val settingsRepository: SettingsRepository
+) {
+    suspend operator fun invoke(methods: Set<ReminderMethod>) {
+        settingsRepository.updateReminderMethods(methods)
+    }
+}
+
+class UpdateDefaultPlatformUseCase(
+    private val settingsRepository: SettingsRepository
+) {
+    suspend operator fun invoke(platform: String) {
+        settingsRepository.updateDefaultPlatform(platform)
+    }
+}
+
+class SetServiceEnabledUseCase(
+    private val settingsRepository: SettingsRepository
+) {
+    suspend operator fun invoke(enabled: Boolean) {
+        settingsRepository.setServiceEnabled(enabled)
+    }
+}
+
 class GetPlatformsUseCase(
     private val platformRepository: PlatformRepository
 ) {
