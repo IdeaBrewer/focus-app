@@ -1,8 +1,17 @@
+#!/bin/bash
+
+# 修复 GitHub Actions 配置的脚本
+
+echo "正在创建 GitHub Actions 目录..."
+mkdir -p .github/workflows
+
+echo "正在创建修复后的 build.yml 文件..."
+cat > .github/workflows/build.yml << 'EOF'
 name: Build Debug APK
 
 on:
   push:
-    branches: [ main, develop ]
+    branches: [ main, master ]
   pull_request:
     branches: [ main ]
   workflow_dispatch:
@@ -46,10 +55,12 @@ jobs:
         name: debug-apk
         path: app/build/outputs/apk/debug/app-debug.apk
         retention-days: 30
-        
-    - name: Upload build outputs
-      uses: actions/upload-artifact@v4
-      with:
-        name: build-outputs
-        path: app/build/outputs/
-        retention-days: 7
+EOF
+
+echo "修复完成！现在提交并推送..."
+git add .github/workflows/build.yml
+git commit -m "fix: 修复GitHub Actions配置文件格式错误"
+git push origin master
+
+echo "推送完成！请查看 GitHub Actions 页面确认编译状态。"
+echo "如果还有问题，请告诉我具体的错误信息。"
