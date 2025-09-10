@@ -38,14 +38,7 @@ jobs:
           ${{ runner.os }}-gradle-
           
     - name: Build debug APK
-      run: |
-        # Try gradlew first, fallback to gradle
-        if [ -f gradlew ]; then
-          chmod +x gradlew
-          ./gradlew assembleDebug
-        else
-          gradle assembleDebug
-        fi
+      run: gradle assembleDebug
       
     - name: Upload debug APK
       uses: actions/upload-artifact@v4

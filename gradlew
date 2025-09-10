@@ -3,7 +3,7 @@
 # Gradle wrapper script for Unix/Linux
 # This is a simplified version for GitHub Actions
 
-DEFAULT_JVM_OPTS='"-Xmx64m" "-Xms64m"'
+DEFAULT_JVM_OPTS="-Xmx64m -Xms64m"
 CLASSPATH=gradle/wrapper/gradle-wrapper.jar
 
 # Determine the Java command to use to start the JVM.
