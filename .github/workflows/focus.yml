@@ -1,13 +1,13 @@
-: [ main, develop ]
+name: Build Debug APK
+
+on:
+  push:
+    branches: [ main, develop ]
   pull_request:
     branches: [ main ]
   workflow_dispatch:
 
-jobs:name: Build Debug APK
-
-on:
-  push:
-    branches
+jobs:
   build:
     runs-on: ubuntu-latest
     
@@ -21,32 +21,28 @@ on:
         java-version: '17'
         distribution: 'temurin'
         
-    - name: Setup Gradle
-      uses: gradle/actions/setup-gradle@v3
+    - name: Setup Android SDK
+      uses: android-actions/setup-android@v3
       
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
       
+    - name: Cache Gradle packages
+      uses: actions/cache@v4
+      with:
+        path: |
+          ~/.gradle/caches
+          ~/.gradle/wrapper
+        key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
+        restore-keys: |
+          ${{ runner.os }}-gradle-
+          
     - name: Build debug APK
       run: ./gradlew assembleDebug
       
     - name: Upload debug APK
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: debug-apk
         path: app/build/outputs/apk/debug/app-debug.apk
-        retention-days: 30
-        
-    - name: Upload build outputs
-      uses: actions/upload-artifact@v3
-      with:
-        name: build-outputs
-        path: app/build/outputs/
-        retention-days: 7
-        
-    - name: Upload mapping file
-      uses: actions/upload-artifact@v3
-      with:
-        name: mapping
-        path: app/build/outputs/mapping/
         retention-days: 30
