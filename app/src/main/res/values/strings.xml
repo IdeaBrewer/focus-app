@@ -51,7 +51,7 @@
     
     <!-- Reminder Overlay -->
     <string name="usage_reminder_title">使用提醒</string>
-    <string name="usage_reminder_message">您已使用%s %d分钟，注意合理使用时间</string>
+    <string name="usage_reminder_message" formatted="false">您已使用%s %d分钟，注意合理使用时间</string>
     <string name="today_total_usage">今日总时长: %s</string>
     <string name="continue_use">继续使用</string>
     <string name="stop_use">停止使用</string>
@@ -90,7 +90,7 @@
     <!-- Time Format -->
     <string name="time_minute">%d分钟</string>
     <string name="time_hour">%d小时</string>
-    <string name="time_format">%02d:%02d:%02d</string>
+    <string name="time_format" formatted="false">%02d:%02d:%02d</string>
     
     <!-- Usage Stats -->
     <string name="usage_today">今日</string>

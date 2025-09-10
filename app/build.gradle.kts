@@ -5,6 +5,7 @@ plugins {
 }
 
 android {
+    namespace = "com.focus.app"
     compileSdk = 33
 
     defaultConfig {
