@@ -47,16 +47,9 @@ android {
     sourceSets {
         getByName("main") {
             java {
+                srcDirs("src/main/java")
                 // Exclude all problematic files that reference disabled dependencies
-                exclude("**/ui/**")
-                exclude("**/di/**")
-                exclude("**/navigation/**")
-                exclude("**/data/database/**")
-                exclude("**/data/service/**")
-                exclude("**/data/repository/**")
-                exclude("**/domain/model/**")
-                exclude("**/domain/usecase/**")
-                // Keep only MainActivity.kt and domain/Repository.kt
+                setIncludes(setOf("**/MainActivity.kt", "**/Repository.kt"))
             }
         }
     }
