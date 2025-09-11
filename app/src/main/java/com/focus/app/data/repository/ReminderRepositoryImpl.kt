@@ -3,6 +3,7 @@ package com.focus.app.data.repository
 import com.focus.app.data.database.ReminderDao
 import com.focus.app.domain.model.*
 import com.focus.app.domain.repository.ReminderRepository
+import com.focus.app.domain.repository.SettingsRepository
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.map

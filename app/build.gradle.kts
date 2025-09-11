@@ -2,8 +2,8 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
-    id("com.google.dagger.hilt.android")
-    id("kotlin-kapt")
+    // id("com.google.dagger.hilt.android") // Disabled for now
+    // id("kotlin-kapt") // Disabled for now
     id("kotlin-parcelize")
 }
 
@@ -41,11 +41,7 @@ android {
     }
     
     buildFeatures {
-        compose = true
-    }
-    
-    composeOptions {
-        kotlinCompilerExtensionVersion = "1.4.3"
+        // compose = true // Disabled for now to focus on basic APK build
     }
 }
 
@@ -65,48 +61,48 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.6.2")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.2")
     
-    // Jetpack Compose
-    implementation("androidx.compose.ui:ui:1.4.3")
-    implementation("androidx.compose.ui:ui-tooling-preview:1.4.3")
-    implementation("androidx.compose.material3:material3:1.1.1")
-    implementation("androidx.compose.material:material:1.4.3")
-    implementation("androidx.compose.material:material-icons-extended:1.4.3")
-    implementation("androidx.compose.runtime:runtime:1.4.3")
-    implementation("androidx.compose.runtime:runtime-livedata:1.4.3")
-    implementation("androidx.activity:activity-compose:1.7.2")
-    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.2")
-    implementation("androidx.navigation:navigation-compose:2.6.0")
-    implementation("androidx.hilt:hilt-navigation-compose:1.0.0")
-    debugImplementation("androidx.compose.ui:ui-tooling:1.4.3")
+    // Jetpack Compose - Disabled for now to focus on basic APK build
+    // implementation("androidx.compose.ui:ui:1.4.3")
+    // implementation("androidx.compose.ui:ui-tooling-preview:1.4.3")
+    // implementation("androidx.compose.material3:material3:1.1.1")
+    // implementation("androidx.compose.material:material:1.4.3")
+    // implementation("androidx.compose.material:material-icons-extended:1.4.3")
+    // implementation("androidx.compose.runtime:runtime:1.4.3")
+    // implementation("androidx.compose.runtime:runtime-livedata:1.4.3")
+    // implementation("androidx.activity:activity-compose:1.7.2")
+    // implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.2")
+    // implementation("androidx.navigation:navigation-compose:2.6.0")
+    // implementation("androidx.hilt:hilt-navigation-compose:1.0.0")
+    // debugImplementation("androidx.compose.ui:ui-tooling:1.4.3")
     
-    // Room database
-    implementation("androidx.room:room-runtime:2.5.2")
-    implementation("androidx.room:room-ktx:2.5.2")
-    kapt("androidx.room:room-compiler:2.5.2")
+    // Room database - Disabled for now to focus on basic APK build
+    // implementation("androidx.room:room-runtime:2.5.2")
+    // implementation("androidx.room:room-ktx:2.5.2")
+    // kapt("androidx.room:room-compiler:2.5.2")
     
-    // Hilt dependency injection
-    implementation("com.google.dagger:hilt-android:2.45")
-    kapt("com.google.dagger:hilt-compiler:2.45")
+    // Hilt dependency injection - Disabled for now
+    // implementation("com.google.dagger:hilt-android:2.45")
+    // kapt("com.google.dagger:hilt-compiler:2.45")
     
-    // Navigation
-    implementation("androidx.navigation:navigation-fragment-ktx:2.6.0")
-    implementation("androidx.navigation:navigation-ui-ktx:2.6.0")
+    // Navigation - Disabled for now to focus on basic APK build
+    // implementation("androidx.navigation:navigation-fragment-ktx:2.6.0")
+    // implementation("androidx.navigation:navigation-ui-ktx:2.6.0")
     
-    // DataStore preferences
-    implementation("androidx.datastore:datastore-preferences:1.0.0")
+    // DataStore preferences - Disabled for now
+    // implementation("androidx.datastore:datastore-preferences:1.0.0")
     
-    // RecyclerView
-    implementation("androidx.recyclerview:recyclerview:1.3.1")
+    // RecyclerView - Disabled for now
+    // implementation("androidx.recyclerview:recyclerview:1.3.1")
     
-    // CardView
-    implementation("androidx.cardview:cardview:1.0.0")
+    // CardView - Disabled for now
+    // implementation("androidx.cardview:cardview:1.0.0")
     
     // Testing
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
     
-    // Hilt testing
-    testImplementation("com.google.dagger:hilt-android-testing:2.45")
-    kaptTest("com.google.dagger:hilt-compiler:2.45")
+    // Hilt testing - Disabled for now
+    // testImplementation("com.google.dagger:hilt-android-testing:2.45")
+    // kaptTest("com.google.dagger:hilt-compiler:2.45")
 }
