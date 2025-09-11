@@ -43,17 +43,48 @@ android {
     buildFeatures {
         // compose = true // Disabled for now to focus on basic APK build
     }
-    
-    sourceSets {
-        getByName("main") {
-            java {
-                srcDirs("src/main/java")
-                // Exclude all problematic files that reference disabled dependencies
-                include("**/MainActivity.kt")
-                include("**/Repository.kt")
+}
+
+// Task to clean up problematic source files before compilation
+task("cleanProblematicFiles") {
+    doLast {
+        val sourceDir = file("src/main/java/com/focus/app")
+        val directoriesToDelete = listOf(
+            "ui", "di", "navigation", "data/database", 
+            "data/service", "data/repository", "domain/model", "domain/usecase"
+        )
+        
+        directoriesToDelete.forEach { dirName ->
+            val dir = file("${sourceDir}/${dirName}")
+            if (dir.exists()) {
+                delete(dir)
+                println("Deleted directory: ${dir.absolutePath}")
+            }
+        }
+        
+        // Delete specific problematic files
+        val filesToDelete = listOf(
+            "FocusApp.kt"
+        )
+        
+        filesToDelete.forEach { fileName ->
+            val file = file("${sourceDir}/${fileName}")
+            if (file.exists()) {
+                delete(file)
+                println("Deleted file: ${file.absolutePath}")
             }
         }
     }
+}
+
+// Make clean task depend on our cleanup task
+tasks.named("clean") {
+    dependsOn("cleanProblematicFiles")
+}
+
+// Run cleanup before compilation
+tasks.named("preBuild") {
+    dependsOn("cleanProblematicFiles")
 }
 
 dependencies {
