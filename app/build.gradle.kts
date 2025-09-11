@@ -43,6 +43,23 @@ android {
     buildFeatures {
         // compose = true // Disabled for now to focus on basic APK build
     }
+    
+    sourceSets {
+        getByName("main") {
+            java {
+                // Exclude all problematic files that reference disabled dependencies
+                exclude("**/ui/**")
+                exclude("**/di/**")
+                exclude("**/navigation/**")
+                exclude("**/data/database/**")
+                exclude("**/data/service/**")
+                exclude("**/data/repository/**")
+                exclude("**/domain/model/**")
+                exclude("**/domain/usecase/**")
+                // Keep only MainActivity.kt and domain/Repository.kt
+            }
+        }
+    }
 }
 
 dependencies {
