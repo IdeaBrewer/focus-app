@@ -1,8 +1,14 @@
 package com.focus.app.data.database
 
 import androidx.room.*
+import androidx.room.ColumnInfo
 import com.focus.app.domain.model.*
 import kotlinx.coroutines.flow.Flow
+
+data class PlatformUsage(
+    @ColumnInfo(name = "appName") val appName: String,
+    @ColumnInfo(name = "totalDuration") val totalDuration: Long
+)
 
 @Dao
 interface UsageDao {
@@ -16,7 +22,7 @@ interface UsageDao {
     fun getTodayUsage(): Flow<Long>
 
     @Query("SELECT appName, SUM(duration) as totalDuration FROM usage_records WHERE DATE(startTime / 1000, 'unixepoch') = DATE('now') GROUP BY appName")
-    fun getTodayPlatformUsage(): Flow<Map<String, Long>>
+    fun getTodayPlatformUsage(): Flow<List<PlatformUsage>>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertUsageRecord(record: UsageRecord): Long

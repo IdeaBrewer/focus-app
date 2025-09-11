@@ -2,8 +2,6 @@ package com.focus.app.domain.model
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import androidx.room.TypeConverter
-import androidx.room.TypeConverters
 
 @Entity(tableName = "usage_records")
 data class UsageRecord(
@@ -27,7 +25,6 @@ data class SearchHistory(
 )
 
 @Entity(tableName = "user_settings")
-@TypeConverters(Converters::class)
 data class UserSettings(
     @PrimaryKey(autoGenerate = true)
     val id: Long = 0,
@@ -79,22 +76,3 @@ data class SearchResult(
     val isSuccess: Boolean,
     val errorMessage: String? = null
 )
-
-// Room Type Converters
-class Converters {
-    @TypeConverter
-    fun fromReminderMethodSet(methods: Set<ReminderMethod>): String {
-        return methods.joinToString(",") { it.name }
-    }
-
-    @TypeConverter
-    fun toReminderMethodSet(methodsString: String): Set<ReminderMethod> {
-        return if (methodsString.isEmpty()) {
-            emptySet()
-        } else {
-            methodsString.split(",")
-                .map { ReminderMethod.valueOf(it) }
-                .toSet()
-        }
-    }
-}
