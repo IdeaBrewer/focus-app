@@ -1,6 +1,6 @@
 package com.focus.app.data.repository
 
-import com.focus.app.data.database.FocusDao
+import com.focus.app.data.database.SearchDao
 import com.focus.app.domain.model.*
 import com.focus.app.domain.repository.SearchRepository
 import kotlinx.coroutines.flow.Flow
@@ -10,7 +10,7 @@ import javax.inject.Singleton
 
 @Singleton
 class SearchRepositoryImpl @Inject constructor(
-    private val searchDao: FocusDao.SearchDao
+    private val searchDao: SearchDao
 ) : SearchRepository {
 
     override suspend fun saveSearchHistory(history: SearchHistory) {

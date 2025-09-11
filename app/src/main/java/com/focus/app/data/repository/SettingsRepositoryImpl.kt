@@ -1,16 +1,17 @@
 package com.focus.app.data.repository
 
-import com.focus.app.data.database.FocusDao
+import com.focus.app.data.database.SettingsDao
 import com.focus.app.domain.model.*
 import com.focus.app.domain.repository.SettingsRepository
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
+import kotlinx.coroutines.flow.first
 import javax.inject.Inject
 import javax.inject.Singleton
 
 @Singleton
 class SettingsRepositoryImpl @Inject constructor(
-    private val settingsDao: FocusDao.SettingsDao
+    private val settingsDao: SettingsDao
 ) : SettingsRepository {
 
     override suspend fun getSettings(): UserSettings {

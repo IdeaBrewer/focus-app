@@ -1,6 +1,6 @@
 package com.focus.app.data.repository
 
-import com.focus.app.data.database.FocusDao
+import com.focus.app.data.database.ReminderDao
 import com.focus.app.domain.model.*
 import com.focus.app.domain.repository.ReminderRepository
 import kotlinx.coroutines.flow.Flow
@@ -11,7 +11,7 @@ import javax.inject.Singleton
 
 @Singleton
 class ReminderRepositoryImpl @Inject constructor(
-    private val reminderDao: FocusDao.ReminderDao,
+    private val reminderDao: ReminderDao,
     private val settingsRepository: SettingsRepository
 ) : ReminderRepository {
 

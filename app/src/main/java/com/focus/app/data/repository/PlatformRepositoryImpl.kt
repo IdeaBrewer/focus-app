@@ -1,16 +1,17 @@
 package com.focus.app.data.repository
 
-import com.focus.app.data.database.FocusDao
+import com.focus.app.data.database.PlatformDao
 import com.focus.app.domain.model.*
 import com.focus.app.domain.repository.PlatformRepository
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
+import kotlinx.coroutines.flow.first
 import javax.inject.Inject
 import javax.inject.Singleton
 
 @Singleton
 class PlatformRepositoryImpl @Inject constructor(
-    private val platformDao: FocusDao.PlatformDao
+    private val platformDao: PlatformDao
 ) : PlatformRepository {
 
     override suspend fun getPlatforms(): List<Platform> {

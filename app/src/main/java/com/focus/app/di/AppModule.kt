@@ -2,8 +2,7 @@ package com.focus.app.di
 
 import android.content.Context
 import androidx.room.Room
-import com.focus.app.data.database.FocusDatabase
-import com.focus.app.data.database.FocusDao
+import com.focus.app.data.database.*
 import com.focus.app.data.repository.*
 import com.focus.app.data.service.*
 import com.focus.app.domain.repository.*
@@ -66,23 +65,23 @@ object DatabaseModule {
 
     @Provides
     @Singleton
-    fun provideUsageDao(database: FocusDatabase): FocusDao.UsageDao = database.usageDao()
+    fun provideUsageDao(database: FocusDatabase): UsageDao = database.usageDao()
 
     @Provides
     @Singleton
-    fun provideSearchDao(database: FocusDatabase): FocusDao.SearchDao = database.searchDao()
+    fun provideSearchDao(database: FocusDatabase): SearchDao = database.searchDao()
 
     @Provides
     @Singleton
-    fun provideSettingsDao(database: FocusDatabase): FocusDao.SettingsDao = database.settingsDao()
+    fun provideSettingsDao(database: FocusDatabase): SettingsDao = database.settingsDao()
 
     @Provides
     @Singleton
-    fun providePlatformDao(database: FocusDatabase): FocusDao.PlatformDao = database.platformDao()
+    fun providePlatformDao(database: FocusDatabase): PlatformDao = database.platformDao()
 
     @Provides
     @Singleton
-    fun provideReminderDao(database: FocusDatabase): FocusDao.ReminderDao = database.reminderDao()
+    fun provideReminderDao(database: FocusDatabase): ReminderDao = database.reminderDao()
 }
 
 @Module

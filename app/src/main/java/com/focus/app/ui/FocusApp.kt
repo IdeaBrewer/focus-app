@@ -5,7 +5,7 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.focus.app.ui.navigation.FocusRoutes
+import com.focus.app.ui.navigation.FocusRoute
 import com.focus.app.ui.screens.MainScreen
 import com.focus.app.ui.screens.SearchScreen
 import com.focus.app.ui.screens.SettingsScreen
@@ -18,21 +18,21 @@ fun FocusApp(
     
     NavHost(
         navController = navController,
-        startDestination = FocusRoutes.Main.route,
+        startDestination = FocusRoute.Main.route,
         modifier = modifier
     ) {
-        composable(FocusRoutes.Main.route) {
+        composable(FocusRoute.Main.route) {
             MainScreen(
                 onNavigateToSearch = {
-                    navController.navigate(FocusRoutes.Search.route)
+                    navController.navigate(FocusRoute.Search.route)
                 },
                 onNavigateToSettings = {
-                    navController.navigate(FocusRoutes.Settings.route)
+                    navController.navigate(FocusRoute.Settings.route)
                 }
             )
         }
         
-        composable(FocusRoutes.Search.route) {
+        composable(FocusRoute.Search.route) {
             SearchScreen(
                 onNavigateBack = {
                     navController.popBackStack()
@@ -40,7 +40,7 @@ fun FocusApp(
             )
         }
         
-        composable(FocusRoutes.Settings.route) {
+        composable(FocusRoute.Settings.route) {
             SettingsScreen(
                 onNavigateBack = {
                     navController.popBackStack()

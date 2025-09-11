@@ -1,6 +1,6 @@
 package com.focus.app.data.repository
 
-import com.focus.app.data.database.FocusDao
+import com.focus.app.data.database.UsageDao
 import com.focus.app.data.service.UsageTrackerService
 import com.focus.app.domain.model.*
 import com.focus.app.domain.repository.UsageRepository
@@ -10,7 +10,7 @@ import javax.inject.Singleton
 
 @Singleton
 class UsageRepositoryImpl @Inject constructor(
-    private val usageDao: FocusDao.UsageDao,
+    private val usageDao: UsageDao,
     private val usageTrackerService: UsageTrackerService
 ) : UsageRepository {
 
@@ -28,6 +28,9 @@ class UsageRepositoryImpl @Inject constructor(
 
     override fun getPlatformUsage(): Flow<Map<String, Long>> {
         return usageDao.getTodayPlatformUsage()
+            .map { platformUsageList ->
+                platformUsageList.associate { it.appName to it.totalDuration }
+            }
     }
 
     override fun getUsageStats(): Flow<UsageStats> {
