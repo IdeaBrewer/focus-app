@@ -49,7 +49,8 @@ android {
             java {
                 srcDirs("src/main/java")
                 // Exclude all problematic files that reference disabled dependencies
-                setIncludes(setOf("**/MainActivity.kt", "**/Repository.kt"))
+                include("**/MainActivity.kt")
+                include("**/Repository.kt")
             }
         }
     }
